@@ -133,7 +133,7 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 
    END
 
-### **Paso 2.2: Homologación de Industria**
+### Paso 2.2: Homologación de Industria
 
 #### A continuación el código que corresponde a la manualidad realizada para Industria:
 

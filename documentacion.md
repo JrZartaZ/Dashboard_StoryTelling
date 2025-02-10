@@ -109,27 +109,27 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 ### **Paso 2.1: Homologación de Ciudades**
 
 #### A continuación el código que corresponde a la manualidad realizada para Ciudad:
-   ```sql
-    CASE 
+    ```sql
+     CASE 
 
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('boston') THEN 'Boston'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('boston, ma') THEN 'Boston'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('nyc', 'new york city', 'new york', 'nyc (remotely)') THEN 'New York'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('washington, dc', 'washington dc', 'dc', 'district of columbia') THEN 'Washington DC'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('st. paul', 'saint paul') THEN 'Saint Paul'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('philadelphia (suburbs)') THEN 'Philadelphia'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('toronto, on', 'toronto') THEN 'Toronto'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('chicago area mostly, but also the us and canada', 'chicago (remote)', 'greater chicago') THEN 'Chicago'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('greater boston area', 'metro boston') THEN 'Boston'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('houston area') THEN 'Houston'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('dfw area', 'dfw') THEN 'Dallas-Fort Worth'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('los angeles', 'la') THEN 'Los Angeles'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('san francisco bay area', 'san francisco') THEN 'San Francisco'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('sacramento, ca') THEN 'Sacramento'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('denver metro') THEN 'Denver'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('charlotte, nc') THEN 'Charlotte'
-  	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('seattle, wa') THEN 'Seattle'
-	ELSE TRIM(LOWER(Ciudad Incorrecto))
+   	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('boston') THEN 'Boston'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('boston, ma') THEN 'Boston'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('nyc', 'new york city', 'new york', 'nyc (remotely)') THEN 'New York'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('washington, dc', 'washington dc', 'dc', 'district of columbia') THEN 'Washington DC'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('st. paul', 'saint paul') THEN 'Saint Paul'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('philadelphia (suburbs)') THEN 'Philadelphia'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('toronto, on', 'toronto') THEN 'Toronto'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('chicago area mostly, but also the us and canada', 'chicago (remote)', 'greater chicago') THEN 'Chicago'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('greater boston area', 'metro boston') THEN 'Boston'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('houston area') THEN 'Houston'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('dfw area', 'dfw') THEN 'Dallas-Fort Worth'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('los angeles', 'la') THEN 'Los Angeles'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('san francisco bay area', 'san francisco') THEN 'San Francisco'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('sacramento, ca') THEN 'Sacramento'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('denver metro') THEN 'Denver'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('charlotte, nc') THEN 'Charlotte'
+  	 WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('seattle, wa') THEN 'Seattle'
+	 ELSE TRIM(LOWER(Ciudad Incorrecto))
     END
 
 ### Paso 2.2: Homologación de Industria

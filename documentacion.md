@@ -146,7 +146,7 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 
 #### A continuación el código que corresponde a la manualidad realizada para Estado, con el objetivo de quedarnos solo con las opciones propuestas en la encuesta y que las demás queden como Otras:
 
-    ```sql
+   ```sql
     CASE 
 	WHEN Estado IN ( 'New Jersey') then 'NUEVA JERSEY'
 	WHEN Estado IN ( 'Maryland') then 'Maryland, virginia'	
@@ -156,3 +156,55 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 	ELSE LOWER(Estado) 
     END
 
+
+### **Paso 3: Conversión de Moneda a COP**
+
+Se usa una formula que multiplicá las compensaciones y los salarios anuales de acuerdo a cada divisa y será multiplicado por COP, para esto usamos la tasa de cambio más reciente, conocemos que hay información de años atrás, más sin embargo el efecto inflacionario y la devaluación de la moneda, nos puede opacar un poco el análisis que queremos alcanzar, por eso se decide una unica tasa de partida siendo la más reciente para cada divisa :
+
+   ```sql
+   CASE 
+	WHEN País Correcto = "Colombia" THEN Salario Anual
+  	WHEN Moneda = "USD" THEN Salario Anual * 4153.95
+  	WHEN Moneda = "EUR" THEN Salario Anual * 4293.90
+  	WHEN Moneda = "JPY" THEN Salario Anual * 37.65
+  	WHEN Moneda = "GBP" THEN Salario Anual * 5152.28
+  	WHEN Moneda = "CHF" THEN Salario Anual * 4565.90
+  	WHEN Moneda = "CAD" THEN Salario Anual * 2885.64
+  	WHEN Moneda = "AUD/NZD" THEN Salario Anual * 2310.49
+  	WHEN Moneda = "NZD" THEN Salario Anual * 2797.49
+  	WHEN Moneda = "ZAR" THEN Salario Anual * 224.47
+  	WHEN Moneda = "HKD" THEN Salario Anual * 533.11
+  	WHEN Moneda = "SEK" THEN Salario Anual * 376.53
+
+  	ELSE Salario Anual
+   END
+
+Proceso también para las compensaciones adicionales:
+
+   ```sql
+   CASE 
+  	WHEN País Correcto = "Colombia" THEN Otras Compensaciones
+  	WHEN Moneda = "USD" THEN Otras Compensaciones * 4153.95
+  	WHEN Moneda = "EUR" THEN Otras Compensaciones * 4293.90
+  	WHEN Moneda = "JPY" THEN Otras Compensaciones * 37.65
+  	WHEN Moneda = "GBP" THEN Otras Compensaciones * 5152.28
+  	WHEN Moneda = "CHF" THEN Otras Compensaciones * 4565.90
+  	WHEN Moneda = "CAD" THEN Otras Compensaciones * 2885.64
+  	WHEN Moneda = "AUD/NZD" THEN Otras Compensaciones * 2310.49
+  	WHEN Moneda = "NZD" THEN Otras Compensaciones * 2797.49
+  	WHEN Moneda = "ZAR" THEN Otras Compensaciones * 224.47
+  	WHEN Moneda = "HKD" THEN Otras Compensaciones * 533.11
+  	WHEN Moneda = "SEK" THEN Otras Compensaciones * 376.53
+
+  	ELSE Otras Compensaciones
+   END
+
+Condición para el manejo correcto de datos:
+
+   ```sql
+   CASE 
+	WHEN Salario Anual COP > 0 and  Compensaciones COP > 0 THEN Salario Anual COP+ Compensaciones COP
+	WHEN Salario Anual COP >0 and (Compensaciones COP is null or Compensaciones COP = 0) THEN Salario Anual COP
+	WHEN Compensaciones COP >0 and (Salario Anual COP is null or Salario Anual COP = 0) THEN Compensaciones COP
+  	ELSE 0
+   END

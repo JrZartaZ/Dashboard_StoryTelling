@@ -128,17 +128,16 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) = 'denver metro' THEN 'Denver'
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) = 'charlotte, nc' THEN 'Charlotte'
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) = 'seattle, wa' THEN 'Seattle'
-        WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('remote', 'home', 'various', 'unknown', 'n/a', 'prefer not to answer','too identifiable', 'i work remotely', 'decline to answer', 'work from home', 'multiple') THEN 'Incorrecto'
-
-  	ELSE TRIM(Ciudad Incorrecto)
+	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('remote', 'home', 'various', 'unknown', 'n/a', 'prefer not to answer','too identifiable', 'i work remotely', 'decline to answer', 'work from home', 'multiple') THEN 'Incorrecto'
+	ELSE TRIM(Ciudad Incorrecto)
    END
 
 ### **Paso 2.2: Homologación de Ciudades**
 
 #### A continuación el código que corresponde a la manualidad realizada para Industria:
    ```sql
-   case 
-	when Industria in ('Accounting, Banking & Finance','Agriculture or Forestry','Art & Design','Business or Consulting','Computing or Tech','Education (Primary/Secondary)','Education (Higher Education)','Engineering or Manufacturing','Entertainment','Government and Public Administration','Health care','Hospitality & Events','Insurance','Law','Law Enforcement & Security','Leisure, Sport & Tourism','Marketing, Advertising & PR','Media & Digital','Nonprofits','Property or Construction','Recruitment or HR','Retail','Sales','Social Work','Transport or Logistics','Utilities & Telecommunications') then Industria
-	else 'Other' 
-   end
+   CASE  
+	WHEN Industria in ('Accounting, Banking & Finance','Agriculture or Forestry','Art & Design','Business or Consulting','Computing or Tech','Education (Primary/Secondary)','Education (Higher Education)','Engineering or Manufacturing','Entertainment','Government and Public Administration','Health care','Hospitality & Events','Insurance','Law','Law Enforcement & Security','Leisure, Sport & Tourism','Marketing, Advertising & PR','Media & Digital','Nonprofits','Property or Construction','Recruitment or HR','Retail','Sales','Social Work','Transport or Logistics','Utilities & Telecommunications') then Industria
+	ELSE 'Other' 
+   END
 

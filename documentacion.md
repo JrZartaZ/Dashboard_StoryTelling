@@ -167,7 +167,7 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 
 Se usa una formula que multiplicá las compensaciones y los salarios anuales de acuerdo a cada divisa y será multiplicado por COP, para esto usamos la tasa de cambio más reciente, conocemos que hay información de años atrás, más sin embargo el efecto inflacionario y la devaluación de la moneda, nos puede opacar un poco el análisis que queremos alcanzar, por eso se decide una unica tasa de partida siendo la más reciente para cada divisa :
 
-    ```sql
+   ```sql
    CASE 
 	WHEN País Correcto = "Colombia" THEN Salario Anual
   	WHEN Moneda = "USD" THEN Salario Anual * 4153.95
@@ -187,7 +187,7 @@ Se usa una formula que multiplicá las compensaciones y los salarios anuales de 
 
 Proceso también para las compensaciones adicionales:
 
-    ```sql
+   ```sql
    CASE 
   	WHEN País Correcto = "Colombia" THEN Otras Compensaciones
   	WHEN Moneda = "USD" THEN Otras Compensaciones * 4153.95
@@ -207,7 +207,7 @@ Proceso también para las compensaciones adicionales:
 
 Condición para el manejo correcto de datos:
 
-    ```sql
+   ```sql
    CASE 
 	WHEN Salario Anual COP > 0 and  Compensaciones COP > 0 THEN Salario Anual COP+ Compensaciones COP
 	WHEN Salario Anual COP >0 and (Compensaciones COP is null or Compensaciones COP = 0) THEN Salario Anual COP

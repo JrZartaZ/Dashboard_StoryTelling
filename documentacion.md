@@ -140,4 +140,19 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
     CASE 
 	WHEN Industria in ('Accounting, Banking & Finance',	'Agriculture or Forestry',	'Art & Design',	'Business or Consulting',	'Computing or Tech',	'Education (Primary/Secondary)',	'Education (Higher Education)',	'Engineering or Manufacturing',	'Entertainment',	'Government and Public Administration',	'Health care',	'Hospitality & Events',	'Insurance',	'Law',	'Law Enforcement & Security',	'Leisure, Sport & Tourism',	'Marketing, Advertising & PR',	'Media & Digital',	'Nonprofits',	'Property or Construction',	'Recruitment or HR',	'Retail',	'Sales',	'Social Work',	'Transport or Logistics',	'Utilities & Telecommunications') THEN Industria
 	ELSE 'Other' 
-   END
+    END
+
+### Paso 2.3: Homologación de Estado
+
+#### A continuación el código que corresponde a la manualidad realizada para Estado, con el objetivo de quedarnos solo con las opciones propuestas en la encuesta y que las demás queden como Otras:
+
+    ```sql
+    CASE 
+	WHEN Estado IN ( 'New Jersey') then 'NUEVA JERSEY'
+	WHEN Estado IN ( 'Maryland') then 'Maryland, virginia'	
+	WHEN Estado IN ( 'Alabama') then 'Alabama, kansas'
+	WHEN Estado IN ( 'Kentucky') then 'Kentucky, ohio'
+	WHEN Estado IN ( 'Arizona') then 'Arizona, california'
+	ELSE LOWER(Estado) 
+    END
+

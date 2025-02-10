@@ -165,7 +165,7 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 
 ### **Paso 3: Conversión de Moneda a COP**
 
-Se usa una formula que multiplicá las compensaciones y los salarios anuales de acuerdo a cada divisa y será multiplicado por COP, para esto usamos la tasa de cambio más reciente, conocemos que hay información de años atrás, más sin embargo el efecto inflacionario y la devaluación de la moneda, nos puede opacar un poco el análisis que queremos alcanzar, por eso se decide una unica tasa de partida siendo la más reciente para cada divisa :
+Se usa una formula que multiplica las compensaciones y los salarios anuales de acuerdo a cada divisa y será multiplicado por COP, para esto usamos la tasa de cambio más reciente, conocemos que hay información de años atrás, más sin embargo el efecto inflacionario y la devaluación de la moneda, nos puede opacar un poco el análisis que queremos alcanzar, por eso se decide una unica tasa de partida siendo la más reciente para cada divisa :
 
     ```sql
     CASE 

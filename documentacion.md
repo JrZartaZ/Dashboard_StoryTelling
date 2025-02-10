@@ -109,7 +109,7 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 ### **Paso 2.1: Homologación de Ciudades**
 
 #### A continuación el código que corresponde a la manualidad realizada para Ciudad:
-    ```sql
+   ```sql
     CASE 
 
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('boston') THEN 'Boston'

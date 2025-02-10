@@ -129,7 +129,6 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('denver metro') THEN 'Denver'
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('charlotte, nc') THEN 'Charlotte'
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('seattle, wa') THEN 'Seattle'
-	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('remote', 'home', 'various', 'unknown', 'n/a', 'prefer not to answer','too identifiable', 'i work remotely', 'decline to answer', 'work from home', 'multiple') THEN 'Incorrecto' 
 	ELSE TRIM(LOWER(Ciudad Incorrecto))
 
    END

@@ -110,7 +110,8 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 
 #### A continuación el código que corresponde a la manualidad realizada para Ciudad:
    ```sql
-   CASE
+   CASE 
+
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('boston') THEN 'Boston'
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('boston, ma') THEN 'Boston'
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('nyc', 'new york city', 'new york', 'nyc (remotely)') THEN 'New York'
@@ -132,7 +133,6 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 	ELSE TRIM(LOWER(Ciudad Incorrecto))
 
    END
-
 
 ### **Paso 2.2: Homologación de Industria**
 

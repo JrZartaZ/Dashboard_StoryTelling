@@ -227,22 +227,22 @@ El Dashboard fue construido en LOOKER con el objetivo de conectar directamente l
 
 ![Primera Visualización](images/Pantallazo1.png)
 
-#### Módulo 1: Contador total de respuestas.
+## Módulo 1: Contador total de respuestas.
 ![Primera Visualización](images/Pantallazo2.png)
 
-#### Módulo 2: Mapa de países/ciudades con distribución de respuestas.
+## Módulo 2: Mapa de países/ciudades con distribución de respuestas.
 Se implementan las visualizaciones geográficas tanto el mapa coroplatico enfocándonos en el país y las burbujas dándole importancia a los estados, las ciudades representan un desgaste que se pudo prevenir con la parametrización de las respuestas.
 
 ![Primera Visualización](images/Pantallazo3.png)
 
-#### Módulo 3: Relación industria-salario con gráfico de barras.
+## Módulo 3: Relación industria-salario con gráfico de barras.
 
 Se maneja la MEDIANA con el objetivo de no sesgar la información con los datos atípicos que desde el promedio claramente se ven afectados.
 
 ![Primera Visualización](images/Pantallazo4.png)
 
 
-#### Módulo 4: Exploración libre con análisis adicionales (distribución salarial, comparación por género, etc.)
+## Módulo 4: Exploración libre con análisis adicionales (distribución salarial, comparación por género, etc.)
 
 En ese módulo buscamos tener más diversidad y que se pueda cruzar la información por eso se adaptaron algunos filtros para encontrar particularidades en la población.
 

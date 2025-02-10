@@ -129,11 +129,12 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('charlotte, nc') THEN 'Charlotte'
   	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('seattle, wa') THEN 'Seattle'
 	WHEN TRIM(LOWER(Ciudad Incorrecto)) IN ('remote', 'home', 'various', 'unknown', 'n/a', 'prefer not to answer','too identifiable', 'i work remotely', 'decline to answer', 'work from home', 'multiple') THEN 'Incorrecto' 
-	ELSE (Ciudad Incorrecto)
-   END
-    
+	ELSE TRIM(LOWER(Ciudad Incorrecto))
 
-### **Paso 2.2: Homologación de Ciudades**
+   END
+
+
+### **Paso 2.2: Homologación de Industria**
 
 #### A continuación el código que corresponde a la manualidad realizada para Industria:
 

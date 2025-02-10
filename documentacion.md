@@ -214,3 +214,15 @@ Condición para el manejo correcto de datos:
 	WHEN Compensaciones COP >0 and (Salario Anual COP is null or Salario Anual COP = 0) THEN Compensaciones COP
   	ELSE 0
     END
+
+
+### **Paso 5: Verificación y Validación**
+
+Revisar que los datos en COP sean consistentes con la TRM más reciente.
+Aplicar filtros y realizar pruebas con datos de muestra para verificar la limpieza
+
+### **Paso 6: Validar Visualización**
+
+El Dashboard fue construido en LOOKER con el objetivo de conectar directamente la base de datos, con este medio de visualización, se busca mostrar los 4 módulos solicitados, primero danto una breve introducción:
+
+![Primera Visualización](images/Pantallazo1.png)

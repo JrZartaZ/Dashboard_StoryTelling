@@ -183,7 +183,7 @@ Se usa una formula que multiplicá las compensaciones y los salarios anuales de 
   	WHEN Moneda = "SEK" THEN Salario Anual * 376.53
 
   	ELSE Salario Anual
-   END
+    END
 
 Proceso también para las compensaciones adicionales:
 

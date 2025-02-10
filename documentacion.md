@@ -1,33 +1,38 @@
-# 📊 Documentación del Dashboard Salarial
+# Documentación del Dashboard Salarial
 
-## 📌 1. Introducción
+##  1. Introducción
 Este proyecto consiste en la limpieza, modelado y análisis de datos salariales a nivel global, visualizados en un **dashboard interactivo en Looker**.
 
 El objetivo principal es transformar los datos originales en una versión estructurada y estandarizada que facilite su análisis, permitiendo explorar tendencias salariales por país, industria, experiencia y género.
 
 ---
 
-## 📌 2. Variables en la Base de Datos Original
-A continuación, se describen las variables originales del dataset. Los nombres de las variables se mantienen en **inglés**, pero la descripción está en **español**.
+## 2. Variables en la Base de Datos Original
+A continuación, se describen las variables originales del dataset. A Pesar que se le hace un tratamiento interno para la facilidad de manejar los campos, a continuación se agrega el nombre original de cada Campo.
 
 | Variable | Tipo de Dato | Descripción |
 |----------|-------------|-------------|
-| `age` | Texto | Grupo de edad del encuestado. Ejemplo: "25-34". |
-| `industry` | Texto | Industria en la que trabaja el encuestado. |
-| `job_title` | Texto | Título del puesto del encuestado. |
-| `annual_salary` | Número | Salario anual reportado por el encuestado. |
-| `additional_compensation` | Número | Compensación monetaria adicional (bonos, overtime, etc.). |
-| `currency` | Texto | Moneda en la que se reporta el salario (ej., USD, EUR, COP, etc.). |
-| `country` | Texto | País donde trabaja el encuestado. |
-| `city` | Texto | Ciudad donde trabaja el encuestado. |
-| `years_experience` | Texto | Años de experiencia profesional en total. |
-| `years_experience_field` | Texto | Años de experiencia en el campo de trabajo actual. |
-| `education` | Texto | Nivel educativo más alto alcanzado. |
-| `gender` | Texto | Género del encuestado. |
+| `How old are you?` | Texto | Grupo de edad del encuestado. Ejemplo: "25-34". |
+| `What industry do you work in?` | Texto | Industria en la que trabaja el encuestado. |
+| `Job title` | Texto | Título del puesto del encuestado. |
+| `If your job title needs additional context, please clarify here:` | Texto | Contexto del puesto del encuestado. |
+| `What is your annual salary? (You'll indicate the currency in a later question. If you are part-time or hourly, please enter an annualized equivalent -- what you would earn if you worked the job 40 hours a week, 52 weeks a year.)` | Número | Salario anual reportado por el encuestado. |
+| `How much additional monetary compensation do you get, if any (for example, bonuses or overtime in an average year)? Please only include monetary compensation here, not the value of benefits.` | Número | Compensación monetaria adicional (bonos, overtime, etc.). |
+| `Please indicate the currency` | Texto | Moneda en la que se reporta el salario (ej., USD, EUR, COP, etc.). |
+| `If "Other," please indicate the currency here:` | Texto | Condicionante si la moneda es otra a las de la lista. |
+| `If your income needs additional context, please provide it here:` | Texto | Contexto de tenencia de Ingresos. |
+| `What country do you work in?` | Texto | País donde trabaja el encuestado. |
+| `If you're in the U.S., what state do you work in?` | Texto | Estado si el encuestado está en Estados Unidos. |
+| `What city do you work in?` | Texto | Ciudad donde trabaja el encuestado. |
+| `How many years of professional work experience do you have overall?` | Texto | Años de experiencia profesional en total. |
+| `How many years of professional work experience do you have in your field?` | Texto | Años de experiencia en el campo de trabajo actual. |
+| `What is your highest level of education completed?` | Texto | Nivel educativo más alto alcanzado. |
+| `What is your gender?` | Texto | Género del encuestado. |
+| `What is your race? (Choose all that apply.)` | Texto | Raza o Etnia del encuestado. |
 
 ---
 
-## 📌 3. Variables Luego del Modelado
+##  3. Variables Luego del Modelado
 Después del procesamiento y limpieza de los datos, se generaron nuevas variables para facilitar el análisis y la visualización en Looker.
 
 | Variable Nueva | Tipo de Dato | Descripción |

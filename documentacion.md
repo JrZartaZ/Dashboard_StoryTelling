@@ -135,9 +135,4 @@ A continuación se evidencia cómo actualizar los datos y aplicar el modelado en
 ### **Paso 2.2: Homologación de Ciudades**
 
 #### A continuación el código que corresponde a la manualidad realizada para Industria:
-   ```sql
-   CASE  
-	WHEN Industria in ('Accounting, Banking & Finance','Agriculture or Forestry','Art & Design','Business or Consulting','Computing or Tech','Education (Primary/Secondary)','Education (Higher Education)','Engineering or Manufacturing','Entertainment','Government and Public Administration','Health care','Hospitality & Events','Insurance','Law','Law Enforcement & Security','Leisure, Sport & Tourism','Marketing, Advertising & PR','Media & Digital','Nonprofits','Property or Construction','Recruitment or HR','Retail','Sales','Social Work','Transport or Logistics','Utilities & Telecommunications') then Industria
-	ELSE 'Other' 
-   END
 
